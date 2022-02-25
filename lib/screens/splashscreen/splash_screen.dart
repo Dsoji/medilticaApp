@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:ratiah_mobile_app/screens/login%20screen/login_screen.dart';
 
 import 'package:ratiah_mobile_app/screens/onboarding%20screen/onboarding_screen1.dart';
 
@@ -17,8 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
         Duration(seconds: 4),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => Onboardingcreen1())));
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => LoginScreen())));
   }
 
   @override

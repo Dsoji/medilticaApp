@@ -71,7 +71,7 @@ class Onboardingcreen1 extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Image.asset(
                       'assets/images/Health tips.png',
-                      height: 550,
+                      height: 300,
                       //   width: double.infinity,
                       fit: BoxFit.fill,
                     ),
@@ -97,7 +97,7 @@ class Onboardingcreen1 extends StatelessWidget {
                 children: [
                   Image.asset(
                     'assets/images/Group.png',
-                    height: 550,
+                    height: 300,
                     // width: double.infinity,
                     fit: BoxFit.fill,
                   ),
