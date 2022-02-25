@@ -35,6 +35,9 @@ class Onboardingcreen1 extends StatelessWidget {
           Container(
             color: mBackgroundColor1,
           ),
+          Container(
+            color: mBackgroundColor1,
+          ),
         ],
       ),
     );
