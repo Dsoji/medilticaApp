@@ -40,7 +40,7 @@ class Onboardingcreen1 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(1.0),
                     child: Image.asset(
                       'assets/images/illustrations.png',
                       height: 300,
@@ -71,8 +71,8 @@ class Onboardingcreen1 extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Image.asset(
                       'assets/images/Health tips.png',
-                      height: 400,
-                      width: 700,
+                      height: 550,
+                      //   width: double.infinity,
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -97,8 +97,9 @@ class Onboardingcreen1 extends StatelessWidget {
                 children: [
                   Image.asset(
                     'assets/images/Group.png',
-                    height: 700,
-                    width: 700,
+                    height: 550,
+                    // width: double.infinity,
+                    fit: BoxFit.fill,
                   ),
                 ],
               ),
