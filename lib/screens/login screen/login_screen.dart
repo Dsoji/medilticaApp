@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:ratiah_mobile_app/screens/login%20screen/login_button.dart';
 
 import '../../constants.dart';
 
@@ -9,73 +10,87 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(BuildContext),
-      body: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(
-              vertical: 20,
-              horizontal: 30,
-            ),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextField(
-                    cursorColor: Colors.grey,
-                    decoration: InputDecoration(
-                      labelText: 'Email',
-                      labelStyle: TextStyle(color: Colors.grey),
-                      border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                        color: Colors.grey,
-                        width: 2,
-                      )),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.blue,
-                          width: 2,
-                        ),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(
+                vertical: 20,
+                horizontal: 30,
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      cursorColor: Colors.grey,
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        labelStyle: TextStyle(color: Colors.grey),
+                        border: UnderlineInputBorder(
+                            borderSide: BorderSide(
                           color: Colors.grey,
-                          width: 0.5,
+                          width: 2,
+                        )),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.blue,
+                            width: 2,
+                          ),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextField(
-                    cursorColor: Colors.grey,
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      labelStyle: TextStyle(color: Colors.grey),
-                      border: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                        color: Colors.grey,
-                        width: 2,
-                      )),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.blue,
-                          width: 2,
-                        ),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      cursorColor: Colors.grey,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        labelStyle: TextStyle(color: Colors.grey),
+                        border: UnderlineInputBorder(
+                            borderSide: BorderSide(
                           color: Colors.grey,
-                          width: 0.5,
+                          width: 2,
+                        )),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.blue,
+                            width: 2,
+                          ),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
-          ),
-        ],
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Forgot Password?',
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
+            SizedBox(
+              height: 350,
+            ),
+            LoginButton()
+          ],
+        ),
       ),
     );
   }
