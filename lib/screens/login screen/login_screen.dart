@@ -18,50 +18,56 @@ class LoginScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                TextField(
-                  cursorColor: Colors.grey,
-                  decoration: InputDecoration(
-                    labelText: 'Email',
-                    labelStyle: TextStyle(color: Colors.grey),
-                    border: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                      color: Colors.grey,
-                      width: 2,
-                    )),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.blue,
-                        width: 2,
-                      ),
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    cursorColor: Colors.grey,
+                    decoration: InputDecoration(
+                      labelText: 'Email',
+                      labelStyle: TextStyle(color: Colors.grey),
+                      border: UnderlineInputBorder(
+                          borderSide: BorderSide(
                         color: Colors.grey,
-                        width: 0.5,
+                        width: 2,
+                      )),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2,
+                        ),
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 0.5,
+                        ),
                       ),
                     ),
                   ),
                 ),
-                TextField(
-                  cursorColor: Colors.grey,
-                  decoration: InputDecoration(
-                    labelText: 'Password',
-                    labelStyle: TextStyle(color: Colors.grey),
-                    border: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                      color: Colors.grey,
-                      width: 2,
-                    )),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.blue,
-                        width: 2,
-                      ),
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    cursorColor: Colors.grey,
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                      labelStyle: TextStyle(color: Colors.grey),
+                      border: UnderlineInputBorder(
+                          borderSide: BorderSide(
                         color: Colors.grey,
-                        width: 0.5,
+                        width: 2,
+                      )),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2,
+                        ),
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 0.5,
+                        ),
                       ),
                     ),
                   ),
