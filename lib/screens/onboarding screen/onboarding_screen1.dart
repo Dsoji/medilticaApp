@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:ratiah_mobile_app/screens/login%20screen/login_screen.dart';
 
@@ -9,7 +7,21 @@ class Onboardingcreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarBuild(BuildContext),
+      appBar: AppBar(
+        backgroundColor: mBackgroundColor1,
+        elevation: 0,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.cancel_outlined,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => LoginScreen()));
+          },
+        ),
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: PageView(
@@ -115,22 +127,4 @@ class Onboardingcreen1 extends StatelessWidget {
       ),
     );
   }
-}
-
-AppBar appBarBuild(BuildContext) {
-  return AppBar(
-    backgroundColor: mBackgroundColor1,
-    elevation: 0,
-    centerTitle: true,
-    leading: IconButton(
-      icon: Icon(
-        Icons.cancel_outlined,
-        color: Colors.black,
-      ),
-      onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => LoginScreen()));
-      },
-    ),
-  );
 }
