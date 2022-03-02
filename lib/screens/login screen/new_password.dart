@@ -78,7 +78,7 @@ class NewpswrdScren extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 '8 characters min, a number and special character.',
-                style: TextStyle(color: Colors.blue),
+                style: TextStyle(color: Colors.grey),
               ),
             ),
             SizedBox(

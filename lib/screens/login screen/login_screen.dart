@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:ratiah_mobile_app/screens/login%20screen/forget_password.dart';
 
 import '../../constants.dart';
 import 'extra files/login_button.dart';
@@ -77,12 +78,19 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Forgot Password?',
-                style: TextStyle(color: Colors.blue),
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: GestureDetector(
+                  child: Text(
+                    'Forgot Password?',
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => RstpswrdScreen(),
+                  )),
+                ),
               ),
             ),
             SizedBox(

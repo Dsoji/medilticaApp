@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ratiah_mobile_app/screens/login%20screen/new_password.dart';
 
 import '../../../constants.dart';
-import '../login_screen.dart';
 
 class RstpswrdButton extends StatelessWidget {
   const RstpswrdButton({Key? key}) : super(key: key);
@@ -33,7 +33,7 @@ class RstpswrdButton extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LoginScreen()),
+              MaterialPageRoute(builder: (context) => NewpswrdScren()),
             );
           },
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ratiah_mobile_app/screens/login%20screen/signin_button.dart';
 
 import '../../constants.dart';
+import 'extra files/signin_button.dart';
 
 class SignupScreen extends StatelessWidget {
   @override
@@ -79,7 +79,6 @@ class SignupScreen extends StatelessWidget {
               height: 350,
             ),
             SignupButton()
-            
           ],
         ),
       ),

@@ -46,7 +46,7 @@ class RstpswrdScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 350,
+              height: 470,
             ),
             RstpswrdButton()
           ],
