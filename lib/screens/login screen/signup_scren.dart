@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:ratiah_mobile_app/screens/login%20screen/terms_of_use.dart';
 
 import '../../constants.dart';
 import 'extra files/signin_button.dart';
@@ -79,8 +81,38 @@ class SignupScreen extends StatelessWidget {
               height: 350,
             ),
             SignupButton(),
-            Container(
-              child: Text(''),
+
+            ///here is the major the koko
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  MCheckBox(),
+                  RichText(
+                    text: TextSpan(
+                      text: 'I have read and agreed to the ',
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'Terms of service \n and policy,',
+                          recognizer: new TapGestureRecognizer()
+                            ..onTap = () => showModalBottomSheet(
+                                  isScrollControlled: true,
+                                  backgroundColor: Colors.transparent,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.vertical(
+                                      top: Radius.circular(30),
+                                    ),
+                                  ),
+                                  context: context,
+                                  builder: (context) => TermofUse(),
+                                ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -89,6 +121,7 @@ class SignupScreen extends StatelessWidget {
   }
 }
 
+////appbar code
 AppBar appBuildBar(BuildContext) {
   return AppBar(
     backgroundColor: mBackgroundColor1,
@@ -109,4 +142,42 @@ AppBar appBuildBar(BuildContext) {
       onPressed: () {},
     ),
   );
+}
+
+////check box code
+class MCheckBox extends StatefulWidget {
+  const MCheckBox({Key? key}) : super(key: key);
+
+  @override
+  State<MCheckBox> createState() => _MCheckBox();
+}
+
+class _MCheckBox extends State<MCheckBox> {
+  bool isChecked = false;
+
+  @override
+  Widget build(BuildContext context) {
+    Color getColor(Set<MaterialState> states) {
+      const Set<MaterialState> interactiveStates = <MaterialState>{
+        MaterialState.pressed,
+        MaterialState.hovered,
+        MaterialState.focused,
+      };
+      if (states.any(interactiveStates.contains)) {
+        return Colors.blue;
+      }
+      return Colors.grey;
+    }
+
+    return Checkbox(
+      checkColor: Colors.white,
+      fillColor: MaterialStateProperty.resolveWith(getColor),
+      value: isChecked,
+      onChanged: (bool? value) {
+        setState(() {
+          isChecked = value!;
+        });
+      },
+    );
+  }
 }
