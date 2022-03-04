@@ -92,13 +92,19 @@ class SignupScreen extends StatelessWidget {
                   RichText(
                     text: TextSpan(
                       text: 'I have read and agreed to the ',
+                      style: TextStyle(color: Colors.black),
                       children: <TextSpan>[
                         TextSpan(
                           text: 'Terms of service \n and policy,',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
                           recognizer: new TapGestureRecognizer()
                             ..onTap = () => showModalBottomSheet(
+                                  elevation: 0,
                                   isScrollControlled: true,
-                                  backgroundColor: Colors.transparent,
+                                  clipBehavior: Clip.hardEdge,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.vertical(
                                       top: Radius.circular(30),

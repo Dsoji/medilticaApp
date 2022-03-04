@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ratiah_mobile_app/screens/login%20screen/login_screen.dart';
+
+import 'package:ratiah_mobile_app/screens/onboarding_page/onboarding_page.dart';
 
 import '../../../constants.dart';
 
@@ -33,7 +34,7 @@ class SignupButton extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LoginScreen()),
+              MaterialPageRoute(builder: (context) => OnboardPage()),
             );
           },
         ),

@@ -8,9 +8,9 @@ class TermofUse extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: DraggableScrollableSheet(
-          initialChildSize: 0.5,
+          initialChildSize: 0.7,
           minChildSize: 0.5,
-          maxChildSize: 0.5,
+          maxChildSize: 0.7,
           builder: (_, controller) => Container(
             color: Colors.transparent,
             padding: EdgeInsets.all(16),
