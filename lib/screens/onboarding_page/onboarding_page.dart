@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:ratiah_mobile_app/screens/onboarding_page/page_list_view.dart';
 
 import '../../constants.dart';
 
-class OnboardPage extends StatelessWidget {
+class OnboardPage extends StatefulWidget {
+  @override
+  _OnboardPageState createState() => _OnboardPageState();
+}
+
+class _OnboardPageState extends State<OnboardPage> {
+  var selected = 0;
+  final pageController = PageController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,26 +20,28 @@ class OnboardPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: 20,
-                horizontal: 10,
-              ),
-              child: Text(
-                'Ónboarding',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: 20,
-                horizontal: 30,
-              ),
-              child: Text(
-                'Complete the steps below to setup your \n profile so you can access care.',
-                style: TextStyle(fontSize: 17),
+              child: ListView(
+                children: [
+                  Text(
+                    'Onboarding      ',
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Complete the steps below to setup your \n profile so you can access care.',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                  Expanded(
+                    child: PageListView(selected, (int index) {
+                      setState(() {
+                        selected = index;
+                      });
+                    }
+                    pageController,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
