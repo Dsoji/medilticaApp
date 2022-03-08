@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:ratiah_mobile_app/screens/login%20screen/login_screen.dart';
 
-import '../../../constants.dart';
-import '../login_screen.dart';
+import '../../constants.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class NewpswrdButton extends StatelessWidget {
-  const NewpswrdButton({Key? key}) : super(key: key);
+class HaveAccountButton extends StatelessWidget {
+  const HaveAccountButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Container(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -17,9 +19,9 @@ class NewpswrdButton extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 16),
             alignment: Alignment.center,
             child: Text(
-              "Create new password",
+              "Get Started",
               style: TextStyle(
-                color: Colors.white,
+                color: Color.fromRGBO(11, 124, 185, 1),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -27,7 +29,7 @@ class NewpswrdButton extends StatelessWidget {
           style: TextButton.styleFrom(
             backgroundColor: mBackgroundColor2,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(36),
+              borderRadius: BorderRadius.circular(36.sp),
             ),
           ),
           onPressed: () {

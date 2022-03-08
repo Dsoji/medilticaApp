@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ratiah_mobile_app/screens/login%20screen/terms_of_use.dart';
 
 import '../../constants.dart';
-import 'extra files/signin_button.dart';
+import '../Buttons/signin_button.dart';
 
 class SignupScreen extends StatelessWidget {
   @override

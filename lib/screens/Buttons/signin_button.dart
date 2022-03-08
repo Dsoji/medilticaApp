@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:ratiah_mobile_app/screens/login%20screen/signup_scren.dart';
 
-import '../../../constants.dart';
+import 'package:ratiah_mobile_app/screens/onboarding_page/onboarding_page.dart';
 
-class LoginButton extends StatelessWidget {
-  const LoginButton({Key? key}) : super(key: key);
+import '../../constants.dart';
+
+class SignupButton extends StatelessWidget {
+  const SignupButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -18,7 +18,7 @@ class LoginButton extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 16),
             alignment: Alignment.center,
             child: Text(
-              "Log in",
+              "Sign Up",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -34,7 +34,7 @@ class LoginButton extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => SignupScreen()),
+              MaterialPageRoute(builder: (context) => OnboardPage()),
             );
           },
         ),

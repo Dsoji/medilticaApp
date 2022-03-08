@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ratiah_mobile_app/screens/login%20screen/extra%20files/newpswrd_button.dart';
+import 'package:ratiah_mobile_app/screens/Buttons/newpswrd_button.dart';
 
 import '../../constants.dart';
 
