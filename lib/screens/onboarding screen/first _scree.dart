@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ratiah_mobile_app/screens/Buttons/create_account_button.dart';
 import 'package:ratiah_mobile_app/screens/Buttons/getstarted_button.dart';
-import 'package:ratiah_mobile_app/screens/login%20screen/login_screen.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants.dart';
@@ -11,21 +11,6 @@ class Firstscreen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            appBar: AppBar(
-              backgroundColor: mBackgroundColor1,
-              elevation: 0,
-              centerTitle: true,
-              leading: IconButton(
-                icon: Icon(
-                  Icons.cancel_outlined,
-                  color: Colors.black,
-                ),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
-                },
-              ),
-            ),
             backgroundColor: Colors.white,
             body: Column(
               children: [
@@ -44,12 +29,15 @@ class Firstscreen1 extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Column(
                     children: [
-                      Container(
-                        height: 32.sp,
-                        width: 110.05.sp,
-                        child: Image.asset(
-                          'assets/images/Logo 1 Ratioh 1.png',
-                          fit: BoxFit.fill,
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Container(
+                          height: 32.sp,
+                          width: 110.05.sp,
+                          child: Image.asset(
+                            'assets/images/Logo 1 Ratioh 1.png',
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
                       Center(

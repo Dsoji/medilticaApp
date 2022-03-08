@@ -19,7 +19,7 @@ class HaveAccountButton extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 16),
             alignment: Alignment.center,
             child: Text(
-              "Get Started",
+              "I already have an account",
               style: TextStyle(
                 color: Color.fromRGBO(11, 124, 185, 1),
                 fontWeight: FontWeight.bold,
@@ -27,8 +27,12 @@ class HaveAccountButton extends StatelessWidget {
             ),
           ),
           style: TextButton.styleFrom(
-            backgroundColor: mBackgroundColor2,
+            backgroundColor: mBackgroundColor1,
             shape: RoundedRectangleBorder(
+              side: BorderSide(
+                  color: Color.fromRGBO(11, 124, 185, 1),
+                  width: 1,
+                  style: BorderStyle.solid),
               borderRadius: BorderRadius.circular(36.sp),
             ),
           ),
