@@ -11,14 +11,23 @@ class PageListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final category = restaurant.menu.keys.toList();
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 25),
-      child: PageView(
-        controller: pageController,
-        onPageChanged: (index) => callback(index),
-        children: [category.map((e) => null)],
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: PageView(
+                controller: pageController,
+                onPageChanged: (index) => callback(index),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
+class Basic {}

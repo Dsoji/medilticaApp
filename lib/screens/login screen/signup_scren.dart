@@ -11,116 +11,119 @@ class SignupScreen extends StatelessWidget {
     return Scaffold(
       appBar: appBuildBar(BuildContext),
       body: SafeArea(
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: 20,
-                horizontal: 30,
-              ),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextField(
-                      cursorColor: Colors.grey,
-                      decoration: InputDecoration(
-                        labelText: 'Email',
-                        labelStyle: TextStyle(color: Colors.grey),
-                        border: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                          color: Colors.grey,
-                          width: 2,
-                        )),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.blue,
-                            width: 2,
-                          ),
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 20,
+                  horizontal: 30,
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        cursorColor: Colors.grey,
+                        decoration: InputDecoration(
+                          labelText: 'Email',
+                          labelStyle: TextStyle(color: Colors.grey),
+                          border: UnderlineInputBorder(
+                              borderSide: BorderSide(
                             color: Colors.grey,
-                            width: 0.5,
+                            width: 2,
+                          )),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.blue,
+                              width: 2,
+                            ),
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                              width: 0.5,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextField(
-                      cursorColor: Colors.grey,
-                      decoration: InputDecoration(
-                        labelText: 'Password',
-                        labelStyle: TextStyle(color: Colors.grey),
-                        border: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                          color: Colors.grey,
-                          width: 2,
-                        )),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.blue,
-                            width: 2,
-                          ),
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        cursorColor: Colors.grey,
+                        decoration: InputDecoration(
+                          labelText: 'Password',
+                          labelStyle: TextStyle(color: Colors.grey),
+                          border: UnderlineInputBorder(
+                              borderSide: BorderSide(
                             color: Colors.grey,
-                            width: 0.5,
+                            width: 2,
+                          )),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.blue,
+                              width: 2,
+                            ),
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                              width: 0.5,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 350,
-            ),
-            SignupButton(),
+              SizedBox(
+                height: 350,
+              ),
+              SignupButton(),
 
-            ///here is the major the koko
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  MCheckBox(),
-                  RichText(
-                    text: TextSpan(
-                      text: 'I have read and agreed to the ',
-                      style: TextStyle(color: Colors.black),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: 'Terms of service \n and policy,',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                          recognizer: new TapGestureRecognizer()
-                            ..onTap = () => showModalBottomSheet(
-                                  elevation: 0,
-                                  isScrollControlled: true,
-                                  clipBehavior: Clip.hardEdge,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.vertical(
-                                      top: Radius.circular(30),
+              ///here is the major the koko
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    MCheckBox(),
+                    RichText(
+                      text: TextSpan(
+                        text: 'I have read and agreed to the ',
+                        style: TextStyle(color: Colors.black),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Terms of service \n and policy,',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                            recognizer: new TapGestureRecognizer()
+                              ..onTap = () => showModalBottomSheet(
+                                    elevation: 0,
+                                    isScrollControlled: true,
+                                    clipBehavior: Clip.hardEdge,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.vertical(
+                                        top: Radius.circular(30),
+                                      ),
                                     ),
+                                    context: context,
+                                    builder: (context) => TermofUse(),
                                   ),
-                                  context: context,
-                                  builder: (context) => TermofUse(),
-                                ),
-                        ),
-                      ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
