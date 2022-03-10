@@ -1,61 +1,72 @@
 import 'package:flutter/material.dart';
-import 'package:ratiah_mobile_app/screens/onboarding_page/page_list_view.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../constants.dart';
 
-class OnboardPage extends StatefulWidget {
-  @override
-  _OnboardPageState createState() => _OnboardPageState();
-}
-
-class _OnboardPageState extends State<OnboardPage> {
-  var selected = 0;
-  final pageController = PageController();
-
+class OnboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20),
-      child: Scaffold(
-        appBar: appBuildBar(BuildContext),
+    return ScreenUtilInit(
+      designSize: Size(375, 667),
+      minTextAdapt: true,
+      splitScreenMode: false,
+      builder: () => Scaffold(
         body: SafeArea(
-          child: Column(
-            children: [
-              Container(
-                child: ListView(
-                  children: [
-                    Text(
-                      'Onboarding      ',
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 54.sp,
+                ),
+                Container(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      'Onboarding',
+                      textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontSize: 17.sp, fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      'Complete the steps below to setup your \n profile so you can access care.',
-                      style: TextStyle(
-                        fontSize: 16.sp,
+                        fontSize: 28.sp,
+                        fontWeight: FontWeight.bold,
+                        color: mFontColor1,
                       ),
                     ),
-                  ],
+                  ),
                 ),
-              ),
-            ],
+                SizedBox(height: 8.sp),
+                Container(
+                  child: Align(
+                    child: Text(
+                      'Complete the steps below to setup your profile so you can access care.',
+                      style: TextStyle(
+                        fontSize: 16.sp,
+                        color: mFontColor2,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Container(
+                  width: 335.sp,
+                  height: 80.sp,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 40,
+                          offset: Offset(8, 10),
+                          color: Colors.grey.withOpacity(0.3),
+                        ),
+                      ]),
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
-}
-
-AppBar appBuildBar(BuildContext) {
-  return AppBar(
-    backgroundColor: mBackgroundColor1,
-    elevation: 0,
-    leading: IconButton(
-      icon: Icon(
-        Icons.arrow_back_ios,
-        color: Colors.black,
-      ),
-      onPressed: () {},
-    ),
-  );
 }

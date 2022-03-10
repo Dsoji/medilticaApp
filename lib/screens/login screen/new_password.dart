@@ -2,31 +2,64 @@ import 'package:flutter/material.dart';
 import 'package:ratiah_mobile_app/screens/Buttons/newpswrd_button.dart';
 
 import '../../constants.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NewpswrdScren extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: apbBuildBar(BuildContext),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Text(
-                      'We just sent you a reset code. Enter it below and set a new password for your account.'),
+    return ScreenUtilInit(
+      designSize: Size(375, 667),
+      minTextAdapt: true,
+      splitScreenMode: false,
+      builder: () => Scaffold(
+        appBar: apbBuildBar(BuildContext),
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: Text(
+                        'We just sent you a reset code. Enter it below and set a new password for your account.'),
+                  ),
                 ),
-              ),
-              Container(
-                child: Padding(
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      cursorColor: Colors.grey,
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        labelStyle: TextStyle(color: Colors.grey),
+                        border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 2,
+                        )),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.blue,
+                            width: 2,
+                          ),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextField(
                     cursorColor: Colors.grey,
                     decoration: InputDecoration(
-                      labelText: 'Email',
+                      labelText: 'Password',
                       labelStyle: TextStyle(color: Colors.grey),
                       border: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -48,46 +81,19 @@ class NewpswrdScren extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextField(
-                  cursorColor: Colors.grey,
-                  decoration: InputDecoration(
-                    labelText: 'Password',
-                    labelStyle: TextStyle(color: Colors.grey),
-                    border: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                      color: Colors.grey,
-                      width: 2,
-                    )),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.blue,
-                        width: 2,
-                      ),
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.grey,
-                        width: 0.5,
-                      ),
-                    ),
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    '8 characters min, a number and special character.',
+                    style: TextStyle(color: Colors.grey),
                   ),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  '8 characters min, a number and special character.',
-                  style: TextStyle(color: Colors.grey),
+                SizedBox(
+                  height: 350,
                 ),
-              ),
-              SizedBox(
-                height: 350,
-              ),
-              NewpswrdButton()
-            ],
+                NewpswrdButton()
+              ],
+            ),
           ),
         ),
       ),
