@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:ratiah_mobile_app/screens/onboarding%20screen/first%20_scree.dart';
 
-import 'package:ratiah_mobile_app/screens/onboarding%20screen/onboarding_screen1.dart';
-
 import '../../constants.dart';
 
 class SplashScreen extends StatefulWidget {

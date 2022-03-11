@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ratiah_mobile_app/screens/login%20screen/login_screen.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants.dart';

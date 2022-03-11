@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ratiah_mobile_app/screens/Buttons/getcare_button.dart';
+import 'package:ratiah_mobile_app/screens/Buttons/logout_button.dart';
 
 import '../../constants.dart';
 
@@ -47,21 +49,35 @@ class OnboardPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 40.sp,
                 ),
                 Container(
                   width: 335.sp,
                   height: 80.sp,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 40,
-                          offset: Offset(8, 10),
-                          color: Colors.grey.withOpacity(0.3),
-                        ),
-                      ]),
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
+                SizedBox(
+                  height: 40.sp,
+                ),
+                Container(
+                  width: 335.sp,
+                  height: 80.sp,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                SizedBox(
+                  height: 157.sp,
+                ),
+                GetcareButton(),
+                SizedBox(
+                  height: 16,
+                ),
+                LogOutButton()
               ],
             ),
           ),

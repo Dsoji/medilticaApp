@@ -112,6 +112,7 @@ class SignupScreen extends StatelessWidget {
                                 ..onTap = () => showModalBottomSheet(
                                       elevation: 0,
                                       isScrollControlled: true,
+                                      backgroundColor: Colors.transparent,
                                       clipBehavior: Clip.hardEdge,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.vertical(
