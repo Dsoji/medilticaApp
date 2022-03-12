@@ -18,12 +18,34 @@ class BasicProfilePage extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                          height: 24,
-                          width: 335,
+                          height: 24.sp,
+                          width: 335.sp,
                           child: Text(
                             '👋🏻 Let’s meet you ',
                             style: TextStyle(color: mFontColor2),
                           )),
+                      SizedBox(
+                        height: 20.sp,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                              flex: 1,
+                              child: CircleAvatar(
+                                backgroundColor: Colors.brown.shade800,
+                                child: const Text('AH'),
+                              )),
+                          SizedBox(width: 134.5),
+                          Expanded(
+                            flex: 1,
+                            child: Text('Upload Picture'),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20.sp,
+                      ),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -31,6 +53,7 @@ class BasicProfilePage extends StatelessWidget {
                               flex: 1,
                               child: TextField(
                                 decoration: InputDecoration(
+                                    border: OutlineInputBorder(),
                                     labelText: 'First Name',
                                     labelStyle:
                                         TextStyle(color: Colors.grey[400])),
@@ -41,6 +64,7 @@ class BasicProfilePage extends StatelessWidget {
                               flex: 1,
                               child: TextField(
                                 decoration: InputDecoration(
+                                    border: OutlineInputBorder(),
                                     labelText: 'Last Name',
                                     labelStyle:
                                         TextStyle(color: Colors.grey[400])),

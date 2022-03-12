@@ -35,18 +35,18 @@ class SignupScreen extends StatelessWidget {
                           decoration: InputDecoration(
                             labelText: 'Email',
                             labelStyle: TextStyle(color: Colors.grey),
-                            border: UnderlineInputBorder(
+                            border: OutlineInputBorder(
                                 borderSide: BorderSide(
                               color: Colors.grey,
                               width: 2,
                             )),
-                            focusedBorder: UnderlineInputBorder(
+                            focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Colors.blue,
                                 width: 2,
                               ),
                             ),
-                            enabledBorder: UnderlineInputBorder(
+                            enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Colors.grey,
                                 width: 0.5,
@@ -62,18 +62,18 @@ class SignupScreen extends StatelessWidget {
                           decoration: InputDecoration(
                             labelText: 'Password',
                             labelStyle: TextStyle(color: Colors.grey),
-                            border: UnderlineInputBorder(
+                            border: OutlineInputBorder(
                                 borderSide: BorderSide(
                               color: Colors.grey,
                               width: 2,
                             )),
-                            focusedBorder: UnderlineInputBorder(
+                            focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Colors.blue,
                                 width: 2,
                               ),
                             ),
-                            enabledBorder: UnderlineInputBorder(
+                            enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Colors.grey,
                                 width: 0.5,

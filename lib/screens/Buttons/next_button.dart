@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:ratiah_mobile_app/screens/onboarding%20screen/onboarding_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants.dart';
 
-class GetStartedButton extends StatelessWidget {
-  const GetStartedButton({Key? key}) : super(key: key);
+class NextButton extends StatelessWidget {
+  const NextButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         child: TextButton(
           child: Container(
-            width: double.infinity,
+            width: 119.sp,
+            height: 50.sp,
             padding: const EdgeInsets.symmetric(vertical: 16),
             alignment: Alignment.center,
             child: Text(
-              "Get Started",
+              "Next",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
