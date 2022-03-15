@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ratiah_mobile_app/screens/Buttons/next_button.dart';
 
 import '../../constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -59,7 +60,7 @@ class BasicProfilePage extends StatelessWidget {
                                         TextStyle(color: Colors.grey[400])),
                               ),
                             ),
-                            SizedBox(width: 15.0),
+                            SizedBox(width: 15.0.sp),
                             Expanded(
                               flex: 1,
                               child: TextField(
@@ -71,6 +72,100 @@ class BasicProfilePage extends StatelessWidget {
                               ),
                             ),
                           ]),
+                      SizedBox(
+                        height: 16.sp,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextField(
+                          cursorColor: Colors.grey,
+                          decoration: InputDecoration(
+                            labelText: 'Select your gender',
+                            labelStyle: TextStyle(color: Colors.grey),
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                              color: Colors.grey,
+                              width: 2,
+                            )),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.blue,
+                                width: 2,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.grey,
+                                width: 0.5,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 16.sp,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextField(
+                          cursorColor: Colors.grey,
+                          decoration: InputDecoration(
+                            labelText: 'Enter you date of birth',
+                            labelStyle: TextStyle(color: Colors.grey),
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                              color: Colors.grey,
+                              width: 2,
+                            )),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.blue,
+                                width: 2,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.grey,
+                                width: 0.5,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 16.sp,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextField(
+                          cursorColor: Colors.grey,
+                          decoration: InputDecoration(
+                            labelText: 'Select your racial identity',
+                            labelStyle: TextStyle(color: Colors.grey),
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                              color: Colors.grey,
+                              width: 2,
+                            )),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.blue,
+                                width: 2,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.grey,
+                                width: 0.5,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 16.sp,
+                      ),
+                      NextButton()
                     ],
                   ),
                 ),
