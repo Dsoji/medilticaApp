@@ -163,7 +163,7 @@ class BasicProfilePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 16.sp,
+                        height: 133.sp,
                       ),
                       NextButton()
                     ],
