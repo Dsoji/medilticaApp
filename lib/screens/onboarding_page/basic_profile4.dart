@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-
-import 'package:ratiah_mobile_app/screens/menu/current_hospital.dart';
-import 'package:ratiah_mobile_app/screens/menu/hospital_menu.dart';
-import 'package:ratiah_mobile_app/screens/phone_number.dart';
-import '../../constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ratiah_mobile_app/screens/Buttons/back_button.dart';
+import 'package:ratiah_mobile_app/screens/Buttons/next_button.dart';
+import 'package:ratiah_mobile_app/screens/menu/relationship_menu.dart';
+import 'package:ratiah_mobile_app/screens/phone_number.dart';
 
-class BasicProfile2 extends StatefulWidget {
+import '../../constants.dart';
+
+class BasicProfile3 extends StatefulWidget {
   @override
-  _BasicProfile2State createState() => _BasicProfile2State();
+  _BasicProfile3State createState() => _BasicProfile3State();
 }
 
-class _BasicProfile2State extends State<BasicProfile2> {
+class _BasicProfile3State extends State<BasicProfile3> {
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
+    throw ScreenUtilInit(
       designSize: Size(375, 667),
       minTextAdapt: true,
       splitScreenMode: false,
@@ -29,7 +30,7 @@ class _BasicProfile2State extends State<BasicProfile2> {
                     height: 48.sp,
                     width: 335.sp,
                     child: Text(
-                      'Enter the contact details of your current doctor, if you have any.',
+                      'Enter the personal details of your next of kin below. This will only be used in emergencies.',
                       style: TextStyle(color: mFontColor2),
                     )),
                 SizedBox(
@@ -40,7 +41,7 @@ class _BasicProfile2State extends State<BasicProfile2> {
                   child: TextField(
                     cursorColor: Colors.grey,
                     decoration: InputDecoration(
-                      labelText: 'Name of your doctor',
+                      labelText: 'Name',
                       labelStyle: TextStyle(color: Colors.grey),
                       border: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -65,29 +66,17 @@ class _BasicProfile2State extends State<BasicProfile2> {
                 SizedBox(
                   height: 16.sp,
                 ),
-                PhoneNumberMenu(),
+                RelationshipMenu(),
                 SizedBox(
-                  height: 40.sp,
-                ),
-                Container(
-                    height: 48.sp,
-                    width: 335.sp,
-                    child: Text(
-                      'Enter the contact details of your current hospital, if you have any. ',
-                      style: TextStyle(color: mFontColor2),
-                    )),
-                SizedBox(
-                  height: 20.sp,
-                ),
-                CurrentHospitalMenu(),
-                SizedBox(
-                  height: 16,
+                  height: 16.sp,
                 ),
                 PhoneNumberMenu(),
                 SizedBox(
-                  height: 16,
+                  height: 264.sp,
                 ),
-                HospitalMenu(),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [BackpageButton(), NextButton()]),
               ],
             ),
           ),
